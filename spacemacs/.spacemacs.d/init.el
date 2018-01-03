@@ -355,10 +355,10 @@ you should place your code here."
   (spacemacs/toggle-transparency)
 
   ;; magit github helm integration
-  (use-package magithub
-    :defer t
-    :after magit
-    :config (magithub-feature-autoinject t))
+  ;; (use-package magithub
+  ;;   :defer t
+  ;;   :after magit
+  ;;   :config (magithub-feature-autoinject t))
 
   ;; org-config
   (setq org-directory "~/Dropbox/Documents/notes")

@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+xfce4-power-manager &
