@@ -35,7 +35,6 @@ in {
   ];
   environment.variables.SHELL = "/run/current-system/sw/bin/bash";
   programs.bash = {
-    enable = true;
     enableCompletion = true;
     interactiveShellInit = ''
       shopt -s checkwinsize # track terminal window resize

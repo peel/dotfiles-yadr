@@ -3,7 +3,6 @@
 with lib;
 
 let
-  sources = import ../../pinned/sources.nix;
   cfg = config.peel.setup;
   home = builtins.getEnv "HOME";
 in {
@@ -24,7 +23,7 @@ in {
       map (n: import (path + ("/" + n)))
           (filter (n: match ".*\\.nix" n != null ||
                       pathExists (path + ("/" + n + "/default.nix")))
-                  (attrNames (readDir path)))
-      ++ [ (import "${home}/.config/nurpkgs/overlay.nix") ];
+            (attrNames (readDir path)));
+      # ++ [ (import "${home}/.config/nurpkgs/overlay.nix") ];
   };
 }

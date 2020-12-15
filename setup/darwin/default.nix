@@ -9,16 +9,18 @@ in {
     ./defaults.nix
     ./keyboard.nix
     ./wm.nix
-    (import "${home}/.config/nurpkgs/darwin-modules").bloop
+    ./bloop.nix
   ];
 
   environment.shellAliases = {
     o = "open";
     darwin-rebuild = "darwin-rebuild --option extra-builtins-file ${home}/.config/nixpkgs/setup/common/secrets/extra-builtins.nix";
   };
-  
+
+  nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
     builders = @/etc/nix/machines
+    experimental-features = nix-command flakes
   '';
 
   networking.knownNetworkServices = ["Wi-Fi" "Bluetooth PAN" "Thunderbolt Bridge"];

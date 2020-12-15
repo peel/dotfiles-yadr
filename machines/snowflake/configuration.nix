@@ -1,5 +1,4 @@
-{ sources ? ../../pinned/sources.nix
-, pkgs ? sources.nixpkgs
+{ pkgs
 , config
 , lib
 , ...

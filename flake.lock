@@ -1,0 +1,86 @@
+{
+  "nodes": {
+    "darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1606417753,
+        "narHash": "sha256-HIdZajJiMqRObKLzEeDsrZ6y9wVx1zDI0LiK9QBea8Q=",
+        "owner": "lnl7",
+        "repo": "nix-darwin",
+        "rev": "6c6eb8ace6599a33eeb33e28453a601ab02e523e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lnl7",
+        "ref": "master",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "emacs-overlay": {
+      "locked": {
+        "lastModified": 1606465214,
+        "narHash": "sha256-q+68/6KqzmQ5tBRNhyV+UBK2KKw7uH2nxQ2mxZiSleY=",
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "rev": "74cf6548f0182c263ff676863470de45a2001623",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1606046962,
+        "narHash": "sha256-244JrrVFht/VMRItDcDlrcwejqpqJInDUWA/x6mucW4=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "a3a0f1289acac24ce2ffe0481bf8cabd3a6ccc64",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1606399261,
+        "narHash": "sha256-ZB/amYy9NmlHSvbiYBaDJpZ1v+x+gguB1LIYl47+iMA=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7f144df7e4b7952d5ce826e9cbecd9aefab47273",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-20.09-darwin",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "darwin": "darwin",
+        "emacs-overlay": "emacs-overlay",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,17 +1,19 @@
 { config, pkgs, ... }:
 
-{
-  environment.variables.EDITOR = "${pkgs.emacs}/bin/emacsclient -tc";
-  environment.variables.ALTERNATE_EDITOR = "${pkgs.emacs}/bin/emacs";
+let
+  emacs = (import emacs/default.nix {inherit pkgs;});
+in {
+  environment.variables.EDITOR = "${emacs}/bin/emacsclient -tc";
+  environment.variables.ALTERNATE_EDITOR = "${emacs}/bin/emacs";
 
-  environment.systemPackages = [ pkgs.emacs ];
+  environment.systemPackages = [ emacs ];
   
   services.emacs = {
     enable = true;
-    package = pkgs.emacs;
+    package = emacs;
   };
   environment.shellAliases = {
-    vim = "${pkgs.emacs}/bin/emacsclient -nw";
-    e   = "${pkgs.emacs}/bin/emacsclient -nw";
+    vim = "${emacs}/bin/emacsclient -nw";
+    e   = "${emacs}/bin/emacsclient -nw";
   };
 }

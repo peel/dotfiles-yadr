@@ -37,11 +37,11 @@ Calibre = self.installApplication rec {
 
 Dash = self.installApplication rec {
   name = "Dash";
-  version = "5.4.0";
+  version = "5.5.0";
   sourceRoot = "Dash.app";
   src = super.fetchurl {
     url = https://kapeli.com/downloads/v5/Dash.zip;
-    sha256 = "1dizd4mmmr3vrqa5x4pdbyy0g00d3d5y45dfrh95zcj5cscypdg2";
+    sha256 = "0hgxg2r141162cd4nzpx65v77m6ag10i6wg35hv0r9a4f0xxsxxv";
     # date = 2018-09-28T23:36:13-0700;
   };
   description = "Dash is an API Documentation Browser and Code Snippet Manager";

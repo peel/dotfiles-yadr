@@ -10,11 +10,8 @@ nix-env -f https://github.com/peel/dotfiles/archive/master.tar.gz -i ; dotfiles
 #+BEGIN_SRC shell
 dotfiles [command]
 #+END_SRC
-- ~link [machine]~ - (re-)link dotfiles
-- ~switch~ (~default~) - tag, apply ~configuration.nix~, tag working
-- ~install [machine]~ - install prerequisites and ~link~
-- ~uninstall~ - ~unlink~ and remove configurations
-- ~unlink~ - unlink dotfiles
+- ~install [machine]~ - install prerequisites
+- ~uninstall~ - remove configurations
 * Sources
 See[[https://github.com/peel/dotfiles][ peel/dotfiles]] at Github [[https://github.com/peel/dotfiles/workflows/Build/badge.svg]]
 
